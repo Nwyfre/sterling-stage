@@ -1,0 +1,22 @@
+<ng-container *ngIf="loading(); else main">
+    <div class="flex justify-content-center align-content-center flex-wrap" style="height:100vh">
+        <p-progress-spinner ariaLabel="loading" />
+    </div>
+    
+</ng-container>
+
+<ng-template #main>
+<p-carousel [value]="shows()" [numVisible]="1" [numScroll]="2" [circular]="true">
+    <ng-template let-show #item>
+        <div class="card">
+            <div class="card__heading glow">{{show.showname}}</div>
+            <div class="card__sub-heading">{{show.description}}</div>
+            <img [src]="show.showflyer" class="card__content" />
+        </div>
+
+</ng-template>
+</p-carousel>
+
+
+
+

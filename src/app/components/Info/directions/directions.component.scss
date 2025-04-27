@@ -1,0 +1,10 @@
+@use '../../../../assets/scss/abstracts/variables' as *;
+@use '../../../../assets/scss/abstracts/mixins' as *;
+
+.directions {
+@include box;
+color: black;
+ li {
+    list-style-type: none;
+ }
+}

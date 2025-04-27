@@ -1,0 +1,25 @@
+
+<div class="outlets" *ngIf="!loading()">
+        <h1 class="page-header">Ticket Outlets</h1>
+        <p-message severity="contrast">
+            <h3>Advance Day Passes are on-line only: Please check status of outlet to see if tickets are currently in stock at that location. Not all outlets carry season passes.</h3>
+        </p-message>
+        <div class="alert alert-warning">
+            
+        </div>
+    
+        <p-dataview #dv [value]="outlets()">
+            <ng-template #list let-items>
+                <app-outlet *ngFor="let outlet of items" [outlet]="outlet"></app-outlet>
+            </ng-template>
+        </p-dataview>
+          
+        <div class="footer">
+            <p>Many of the groups performing at the festivals sell tickets directly, check with your favorite.</p>
+          
+        <p>We are always looking to widen our circle of friends and to make things as convenient as possible for our patrons.
+            If you know a place in your neighborhood that would be interested in being a ticket outlet please <a class="link-text-dark" href="mailto:sterlingstage@gmail.com">let us know</a>.</p>
+        </div>
+        
+       
+    </div>

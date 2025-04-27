@@ -1,0 +1,25 @@
+@import '../abstracts/variables';
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Monoton&family=Rye&family=Smooch&display=swap');
+
+
+.social_icon {
+    max-width: 20px;
+    border: none;
+}
+
+.glow {
+    color: #fff;
+    text-align: center;
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px $secondary, 0 0 40px $secondary, 0 0 50px $secondary, 0 0 60px $secondary, 0 0 70px $secondary;
+  }
+
+  .page-header {
+    margin-bottom: 1rem;
+  }
+
+//Google Fonts installed
+
+// font-family: 'Lobster', cursive;
+// font-family: 'Monoton', cursive;
+// font-family: 'Rye', cursive;
+// font-family: 'Smooch', cursive;

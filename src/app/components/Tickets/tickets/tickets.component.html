@@ -1,0 +1,23 @@
+<div class="ticket-section-container">
+    <section>
+        <div class="alert alert-warning m-2">
+            <div class="col-12 px-0">
+                <span>
+                <p style="margin: 0;">All tickets include tent camping space</p>
+                <p class="ticket-subparagraph">Day pass patrons must leave venue by 11am following day.</p>
+                <p class="ticket-subparagraph">Vehicle parking is separate, <a class="parking-link" href="/info/parking">click
+                        here</a> for info</p>
+                <p class="ticket-subparagraph">Children 12 and under are free!</p>
+            </span>
+            </div>
+
+        </div>
+    </section>
+    <div class="grid grid-nogutter justify-content-center">
+        <div *ngFor="let ticketType of ticketTypes" class="col-12 sm:col-12 md:col-6 lg:col-4 px-1">
+            <app-ticket-section  [ticketType]="ticketType"></app-ticket-section>
+        </div>
+    </div>
+    
+
+</div>  

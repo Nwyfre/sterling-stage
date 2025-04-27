@@ -1,0 +1,39 @@
+
+@use '../../../assets/scss/abstracts/variables' as *; 
+
+.card {
+    background-color: #343a40 !important;
+    border-radius: 8px;
+    
+
+    &__heading {
+        font-family: 'Smooch', cursive;
+        text-align: center;
+        font-size: 2.5rem;
+
+        @media(min-width: $sm) {
+            font-size: 4rem;
+        }
+
+        @media(min-width: $md) {
+            font-size: 5rem;
+        }
+
+        @media(min-width: $lg) {
+            font-size: 6rem;
+        }
+        
+     }
+
+     &__content {
+        max-width: 100%;
+        height: auto;
+     }
+
+     &__sub-heading {
+        font-size: 1.5rem;
+        text-align: center;
+        margin-bottom: 12px;
+     }
+
+    }

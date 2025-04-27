@@ -1,0 +1,11 @@
+@use '../../../../assets/scss/abstracts/mixins' as *;
+@use '../../../../assets/scss/abstracts/variables' as *;
+
+    .camping {
+        color: black;
+        @include box;
+
+        a {
+            color: darkblue;
+        }
+    }

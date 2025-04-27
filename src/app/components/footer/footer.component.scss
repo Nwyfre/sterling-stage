@@ -1,0 +1,16 @@
+@use '../../../assets/scss/abstracts/variables' as *;
+
+.footer {
+    color: black;
+    margin-top: 32px;
+    background-color: $secondary;
+    border-radius: 4px;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+     p {
+        margin-bottom: 0 !important;
+    }
+}

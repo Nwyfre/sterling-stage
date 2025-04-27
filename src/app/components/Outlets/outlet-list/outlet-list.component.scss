@@ -1,0 +1,25 @@
+@use '../../../../assets/scss/abstracts/variables' as *;
+
+    .outlets {
+        margin-top: 32px;
+        background-color: $secondary;
+        border-radius: 4px;
+        padding: 16px;
+    }
+
+    a.link-text-dark {
+        color: darkblue;
+    }
+
+    .footer {
+        color: black;
+        font-size: 1.25rem;
+    }
+
+
+    // PrimeNG Overrides 
+    :host ::ng-deep {
+        div.p-dataview {
+            margin-top: 16px;
+        }
+    }

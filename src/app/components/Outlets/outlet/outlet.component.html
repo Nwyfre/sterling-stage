@@ -1,0 +1,22 @@
+<p-card [style]="{ width: '25rem', overflow: 'hidden' }">
+    <ng-template #header>
+        <img [alt]=outlet?.name [title]=outlet?.name
+            id="img_{{outlet?.name}}" class="w-full" [src]="outlet?.imageUrl"/>
+    </ng-template>
+    <ng-template #title> {{outlet?.name}} </ng-template>
+    <ng-template #subtitle> Ticket Availability</ng-template>
+    <ul class="list-group list-group-flush text-center">
+        <ng-container *ngFor="let tkt of outlet?.tickets">
+            <li *ngIf="tkt.show !== null" class="list-group-item list-group-item-primary">
+                {{tkt.desc}} -- {{tkt.show.showname}} -- {{tkt.price | currency}}
+            </li>
+            <li *ngIf="tkt.show === null" class="list-group-item list-group-item-primary">
+                {{tkt.desc}} -- {{tkt.price | currency}}
+            </li>
+        </ng-container>
+                
+        <li *ngIf="outlet?.tickets == undefined || !outlet?.tickets?.length" class="list-group-item list-group-item-primary">
+                Check Back Soon
+            </li>
+    </ul>
+</p-card>
