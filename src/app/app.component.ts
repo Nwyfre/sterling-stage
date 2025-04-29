@@ -8,7 +8,6 @@ import { NgxSpinnerModule } from "ngx-spinner";
 import { NgxSpinnerService } from "ngx-spinner";
 import { FooterComponent } from "./components/footer/footer.component";
 
-
 @Component({
   selector: 'app-root',
   imports: [RouterOutlet, NavigationComponent, ProgressSpinnerModule, Toast, NgxSpinnerModule, FooterComponent],

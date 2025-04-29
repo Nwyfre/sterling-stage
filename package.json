@@ -18,7 +18,7 @@
     "@angular/platform-browser-dynamic": "^19.2.0",
     "@angular/router": "^19.2.0",
     "@primeng/themes": "^19.1.0",
-    "ng2-pdf-viewer": "^10.4.0",
+    "ng2-pdfjs-viewer": "^19.0.0",
     "ngx-google-analytics": "^14.0.1",
     "ngx-spinner": "^19.0.0",
     "primeflex": "^4.0.0",

@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
-import { PdfViewerModule } from 'ng2-pdf-viewer';
+import { PdfJsViewerModule } from "ng2-pdfjs-viewer"
 
 @Component({
   selector: 'app-sitemap',
-  imports: [PdfViewerModule],
+  imports: [PdfJsViewerModule],
   templateUrl: './sitemap.component.html',
   styleUrl: './sitemap.component.scss'
 })

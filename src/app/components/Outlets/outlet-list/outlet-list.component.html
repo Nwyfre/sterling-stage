@@ -1,5 +1,13 @@
 
-<div class="outlets" *ngIf="!loading()">
+<ng-container *ngIf="loading(); else main">
+    <div class="flex justify-content-center align-content-center flex-wrap" style="height:100vh">
+        <p-progress-spinner ariaLabel="loading" />
+    </div>
+    
+</ng-container>
+
+<ng-template #main>
+    <div class="outlets">
         <h1 class="page-header">Ticket Outlets</h1>
         <p-message severity="contrast">
             <h3>Advance Day Passes are on-line only: Please check status of outlet to see if tickets are currently in stock at that location. Not all outlets carry season passes.</h3>
@@ -10,7 +18,10 @@
     
         <p-dataview #dv [value]="outlets()">
             <ng-template #list let-items>
-                <app-outlet *ngFor="let outlet of items" [outlet]="outlet"></app-outlet>
+                <div *ngFor="let outlet of items" class="m-3">
+                    <app-outlet [outlet]="outlet"></app-outlet>
+                </div>
+                
             </ng-template>
         </p-dataview>
           
@@ -23,3 +34,5 @@
         
        
     </div>
+</ng-template>
+
