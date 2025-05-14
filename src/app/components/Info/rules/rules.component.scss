@@ -1,0 +1,7 @@
+@use '../../../../assets/scss/abstracts/mixins' as *;
+
+    .rules {
+        color: black;
+        font-size: 1.25rem;
+        @include box;
+    }

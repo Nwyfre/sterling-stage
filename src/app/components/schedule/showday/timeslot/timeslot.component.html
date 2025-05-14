@@ -1,0 +1,29 @@
+<div class="timeslot card">
+    <a href={{timeslot().band.bandpic}} class="preview">
+        <img class="band-pic" src={{timeslot().band.bandpic}} [alt]="timeslot().band.name" />
+    </a>
+    <div class="card-body flex flex-column align-content-center flex-wrap p-3">
+        <h5 class="card-title text-2xl text-center">{{timeslot().band.name}}</h5>
+        <p class="card-text text-center text-xl pb-2">
+        {{timeslot().time}} - {{timeslot().stage}}
+        </p>
+
+        <div class="flex">
+            <a *ngIf="timeslot().band.facebook" title="Facebook" class="band_pages mx-2 text-xl" [href]="timeslot().band.facebook"
+            target="_blank"><fa-icon [icon]="faFacebook()"></fa-icon></a>
+        <a *ngIf="timeslot().band.twitter" title="Twitter" class="band_pages mx-2 text-xl" [href]="timeslot().band.twitter"
+            target="_blank"><fa-icon [icon]="faTwitter()"></fa-icon></a>
+        <a *ngIf="timeslot().band.myspace" title="MySpace" class="band_pages mx-2 text-xl" [href]="timeslot().band.myspace"
+            target="_blank"><fa-icon [icon]="faMyspace()"></fa-icon></a>
+        <a *ngIf="timeslot().band.reverb" title="Reverb" class="band_pages mx-2 text-xl" [href]="timeslot().band.reverb"
+            target="_blank"><fa-icon [icon]="faReverb()"></fa-icon></a>
+        <a *ngIf="timeslot().band.youtube" itle="YouTube" class="band_pages mx-2 text-xl" [href]="timeslot().band.youtube"
+            target="_blank"><fa-icon [icon]="faYoutube()"></fa-icon></a>
+        <a *ngIf="timeslot().band.spotify" title="Spotify" class="band_pages mx-2 text-xl" [href]="timeslot().band.spotify"
+            target="_blank"><fa-icon [icon]="faSpotify()"></fa-icon></a>
+        <a *ngIf="timeslot().band.bandsite "title="Band Page" class="band_pages mx-2 text-xl"  [href]="timeslot().band.bandsite"
+            target="_blank"><fa-icon [icon]="faBand()"></fa-icon></a>
+        </div>
+       
+    </div>
+</div>

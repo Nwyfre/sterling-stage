@@ -35,17 +35,17 @@ export class NavigationComponent implements OnInit{
           }
         ]
       },
-      /*
+      
         {
           label: 'Schedules',
           items: [
             {
               label: 'Folkfest',
-              route: '/schedule/1'
+              command: () => this.router.navigate(['/schedule/1'])
             }
           ]
         },
-      */
+      
      {
       label: 'Info',
       items: [
@@ -64,6 +64,18 @@ export class NavigationComponent implements OnInit{
         {
           label: 'Site Map',
           command: () => this.router.navigate(['/info/sitemap'])
+        },
+        {
+          label: 'Contact Us',
+          command: () => this.router.navigate(['/info/contact'])
+        }, 
+        {
+          label: 'Rules',
+          command: () => this.router.navigate(['/info/rules'])
+        },
+        {
+          label: 'About',
+          command: () => this.router.navigate(['/info/about'])
         }
       ]
      },

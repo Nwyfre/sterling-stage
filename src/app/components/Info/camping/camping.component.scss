@@ -3,8 +3,15 @@
 
     .camping {
         color: black;
+        font-size: 1.25rem;
+        
         @include box;
-
+        
+        ul {
+            li {
+                list-style: none;
+            }
+        }
         a {
             color: darkblue;
         }

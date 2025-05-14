@@ -1,0 +1,17 @@
+@use '../../../assets/scss/abstracts/variables' as *;
+
+.schedule-icon {
+    max-width: 48px;
+}
+
+.show-header {
+    font-size: 1.8rem;
+
+    @media (min-width: $sm) {
+        font-size: 2rem;
+    }
+    
+    @media (min-width: $md) {
+        font-size: 3rem
+    }
+}

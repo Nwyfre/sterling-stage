@@ -1,0 +1,19 @@
+<div>
+    <form [formGroup]="subForm" (ngSubmit)="onSubmit()">
+        <div class="mb-4">
+            <p-iftalabel>
+                <input pInputText id="name" formControlName="name" autocomplete="off" />
+                <label for="name">Name</label>
+            </p-iftalabel>
+        </div>
+        <div class="mb-4">
+            <p-iftalabel>
+                <input pInputText id="email" formControlName="email" autocomplete="off" />
+                <label for="email">Email</label>
+            </p-iftalabel>
+        </div>
+        
+
+        <button pButton type="submit" [disabled]="!subForm.valid" severity="contrast">Submit</button>
+        </form>
+</div>

@@ -1,0 +1,6 @@
+<p-accordion [value]="0" [multiple]="true"> 
+    <p-accordion-panel *ngFor="let showday of showDays(); index as i" [value]="i">
+        <p-accordion-header>{{showday.dayname}} {{showday.daydate}}</p-accordion-header>
+        <p-accordion-content><app-showday [showday]="showday"></app-showday></p-accordion-content>
+    </p-accordion-panel>
+</p-accordion>

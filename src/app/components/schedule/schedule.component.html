@@ -1,0 +1,29 @@
+
+<ng-container *ngIf="isLoading(); else main">
+    <div class="flex justify-content-center align-content-center flex-wrap" style="height:100vh">
+        <p-progress-spinner ariaLabel="loading" />
+    </div>
+</ng-container>
+
+<ng-template #main>
+    <ng-container *ngIf="showSchedule(); else empty">
+        <div class="p-2">
+            <h3 style="text-align:left">SCHEDULE</h3>
+        <h4 class="show-header" style="text-align:left">{{schedule().showname}} {{schedule().year}} Schedule</h4>
+    
+        <a href="/tickets" class="tickets"><img class="schedule-icon" src="/images/tickets-icon.png" alt="Tickets" title="Click here for Ticket Information" /></a>
+        <!-- svelte-ignore a11y-click-events-have-key-events -->
+        <a class="schedule_overlay"  (click)="showPDF($event)" href="#!"><img class="schedule-icon" src="/images/pdf-icon.png" alt="View PDF" title="View Schedule PDF"></a>
+        </div>
+        
+        <app-schedule-list [(showDays)]=schedule().showdays></app-schedule-list>
+    </ng-container>
+    
+    <p-dialog [(visible)]="showSchedulePDF" [modal]="true" [style]="{ width: '100%', height: '800px', maxWidth: '1325px'}">
+        <ng2-pdfjs-viewer [pdfSrc]="'/schedules/folkfest.pdf'"></ng2-pdfjs-viewer>
+    </p-dialog>
+    
+    <ng-template #empty>
+        <h3 class="ml-2" style="text-align:left">No Schedule information available.</h3>
+    </ng-template>
+</ng-template>

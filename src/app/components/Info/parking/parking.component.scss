@@ -5,6 +5,7 @@
 .parking {
     @include box;
     color: black;
+    font-size: 1.25rem;
     a {
         color: darkblue;
     }
